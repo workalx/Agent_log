@@ -1,0 +1,78 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="puzzleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ccff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="puzzleGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Основа головоломки -->
+  <rect x="30" y="30" width="140" height="140" fill="url(#puzzleGradient)" filter="url(#puzzleGlow)" rx="10"/>
+  
+  <!-- Кутові елементи -->
+  <rect x="40" y="40" width="30" height="30" fill="#00ff88" rx="5">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="130" y="40" width="30" height="30" fill="#ff6600" rx="5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="40" y="130" width="30" height="30" fill="#ffff00" rx="5">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="130" y="130" width="30" height="30" fill="#ff00ff" rx="5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Центральний елемент -->
+  <circle cx="100" cy="100" r="25" fill="#ffffff" opacity="0.8">
+    <animate attributeName="r" values="25;30;25" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- З'єднуючі лінії -->
+  <line x1="70" y1="55" x2="100" y2="100" stroke="#00ff88" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="130" y1="55" x2="100" y2="100" stroke="#ff6600" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+  </line>
+  <line x1="70" y1="145" x2="100" y2="100" stroke="#ffff00" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite" begin="1s"/>
+  </line>
+  <line x1="130" y1="145" x2="100" y2="100" stroke="#ff00ff" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite" begin="1.5s"/>
+  </line>
+  
+  <!-- Обертові кільця -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#00ccff" stroke-width="2" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="45" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" values="360 100 100;0 100 100" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Плаваючі символи -->
+  <text x="85" y="105" fill="#000" font-size="16" font-weight="bold">?</text>
+  <text x="95" y="105" fill="#000" font-size="16" font-weight="bold">X</text>
+  <text x="105" y="105" fill="#000" font-size="16" font-weight="bold">Y</text>
+  
+  <!-- Пульсуючі точки -->
+  <circle cx="60" cy="60" r="3" fill="#00ff88">
+    <animate attributeName="r" values="3;6;3" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="60" r="3" fill="#ff6600">
+    <animate attributeName="r" values="3;6;3" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle cx="60" cy="140" r="3" fill="#ffff00">
+    <animate attributeName="r" values="3;6;3" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+  </circle>
+  <circle cx="140" cy="140" r="3" fill="#ff00ff">
+    <animate attributeName="r" values="3;6;3" dur="1s" repeatCount="indefinite" begin="0.9s"/>
+  </circle>
+</svg> 

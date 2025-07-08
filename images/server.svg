@@ -1,0 +1,70 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff0000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="serverGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Основа сервера -->
+  <rect x="40" y="60" width="120" height="80" fill="url(#serverGradient)" filter="url(#serverGlow)"/>
+  
+  <!-- Верхня частина -->
+  <rect x="50" y="40" width="100" height="20" fill="url(#serverGradient)" filter="url(#serverGlow)"/>
+  
+  <!-- Індикатори -->
+  <circle cx="70" cy="50" r="4" fill="#00ff88">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="85" cy="50" r="4" fill="#ff0000">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="50" r="4" fill="#00ccff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="115" cy="50" r="4" fill="#ffff00">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="50" r="4" fill="#00ff88">
+    <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Слоты для даних -->
+  <rect x="55" y="75" width="90" height="8" fill="#000" opacity="0.7"/>
+  <rect x="55" y="90" width="90" height="8" fill="#000" opacity="0.7"/>
+  <rect x="55" y="105" width="90" height="8" fill="#000" opacity="0.7"/>
+  <rect x="55" y="120" width="90" height="8" fill="#000" opacity="0.7"/>
+  
+  <!-- Анімовані дані -->
+  <rect x="55" y="75" width="20" height="8" fill="#00ff88">
+    <animate attributeName="x" values="55;125;55" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="55" y="90" width="15" height="8" fill="#00ccff">
+    <animate attributeName="x" values="55;130;55" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="55" y="105" width="25" height="8" fill="#ff6600">
+    <animate attributeName="x" values="55;120;55" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="55" y="120" width="18" height="8" fill="#ffff00">
+    <animate attributeName="x" values="55;127;55" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Енергетичні хвилі -->
+  <path d="M 30 100 Q 50 80 70 100 Q 90 120 110 100 Q 130 80 150 100 Q 170 120 190 100" 
+        fill="none" stroke="#ff0000" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Захист -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#ff0000" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="70;80;70" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

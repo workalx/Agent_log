@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="agentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ccff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Фоновий круг -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#agentGradient)" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Голова агента -->
+  <circle cx="100" cy="80" r="25" fill="url(#agentGradient)" filter="url(#glow)"/>
+  
+  <!-- Окуляри -->
+  <ellipse cx="95" cy="78" rx="8" ry="6" fill="none" stroke="#000" stroke-width="2"/>
+  <ellipse cx="105" cy="78" rx="8" ry="6" fill="none" stroke="#000" stroke-width="2"/>
+  <line x1="103" y1="78" x2="97" y2="78" stroke="#000" stroke-width="2"/>
+  
+  <!-- Тіло -->
+  <rect x="85" y="105" width="30" height="40" fill="url(#agentGradient)" filter="url(#glow)"/>
+  
+  <!-- Руки -->
+  <rect x="75" y="110" width="8" height="25" fill="url(#agentGradient)" filter="url(#glow)"/>
+  <rect x="117" y="110" width="8" height="25" fill="url(#agentGradient)" filter="url(#glow)"/>
+  
+  <!-- Ноги -->
+  <rect x="90" y="145" width="8" height="20" fill="url(#agentGradient)" filter="url(#glow)"/>
+  <rect x="102" y="145" width="8" height="20" fill="url(#agentGradient)" filter="url(#glow)"/>
+  
+  <!-- Енергетичні ефекти -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="60;70;60" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Пульсуючі точки -->
+  <circle cx="70" cy="70" r="3" fill="#00ff88">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="70" r="3" fill="#00ccff">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="70" cy="130" r="3" fill="#00ccff">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="130" cy="130" r="3" fill="#00ff88">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+</svg> 

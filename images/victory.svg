@@ -1,0 +1,80 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="victoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc66;stop-opacity:1" />
+    </linearGradient>
+    <filter id="victoryGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Фоновий круг -->
+  <circle cx="100" cy="100" r="80" fill="url(#victoryGradient)" filter="url(#victoryGlow)" opacity="0.3">
+    <animate attributeName="r" values="80;90;80" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Трофей -->
+  <rect x="85" y="60" width="30" height="40" fill="#ffff00" rx="5"/>
+  <rect x="90" y="50" width="20" height="15" fill="#ffff00" rx="10"/>
+  <circle cx="100" cy="45" r="8" fill="#ffff00"/>
+  
+  <!-- Кубок -->
+  <path d="M 85 100 L 95 80 L 105 80 L 115 100 L 115 120 L 85 120 Z" fill="#ffff00"/>
+  <rect x="90" y="120" width="20" height="10" fill="#ffff00"/>
+  
+  <!-- Зірки -->
+  <polygon points="100,30 102,35 107,35 103,38 105,43 100,40 95,43 97,38 93,35 98,35" fill="#ffff00">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="70,50 72,55 77,55 73,58 75,63 70,60 65,63 67,58 63,55 68,55" fill="#00ff88">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="130,50 132,55 137,55 133,58 135,63 130,60 125,63 127,58 123,55 128,55" fill="#00ccff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="70,120 72,125 77,125 73,128 75,133 70,130 65,133 67,128 63,125 68,125" fill="#ff6600">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="130,120 132,125 137,125 133,128 135,133 130,130 125,133 127,128 123,125 128,125" fill="#ff00ff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.3s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Конфеті -->
+  <circle cx="40" cy="40" r="3" fill="#00ff88">
+    <animate attributeName="cy" values="40;160;40" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="40;160;40" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="40" r="3" fill="#00ccff">
+    <animate attributeName="cy" values="40;160;40" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="160;40;160" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="160" r="3" fill="#ff6600">
+    <animate attributeName="cy" values="160;40;160" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="40;160;40" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="160" r="3" fill="#ffff00">
+    <animate attributeName="cy" values="160;40;160" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="160;40;160" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Енергетичні хвилі -->
+  <path d="M 20 100 Q 40 80 60 100 Q 80 120 100 100 Q 120 80 140 100 Q 160 120 180 100" 
+        fill="none" stroke="#00ff88" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Пульсуючі кільця -->
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.5">
+    <animate attributeName="r" values="50;70;50" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#00ccff" stroke-width="2" opacity="0.5">
+    <animate attributeName="r" values="30;50;30" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

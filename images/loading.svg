@@ -1,0 +1,73 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="loadingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ccff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="loadingGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Центральний круг -->
+  <circle cx="100" cy="100" r="40" fill="url(#loadingGradient)" filter="url(#loadingGlow)">
+    <animate attributeName="r" values="40;50;40" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Обертові кільця -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#00ccff" stroke-width="2" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" values="360 100 100;0 100 100" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Плаваючі частинки -->
+  <circle cx="60" cy="60" r="4" fill="#00ff88">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="60" r="4" fill="#00ccff">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="140" r="4" fill="#0066cc">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="140" r="4" fill="#00ff88">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Додаткові частинки -->
+  <circle cx="100" cy="40" r="3" fill="#00ccff">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="100" r="3" fill="#00ff88">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="160" r="3" fill="#0066cc">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="100" r="3" fill="#00ccff">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Енергетичні хвилі -->
+  <path d="M 20 100 Q 40 80 60 100 Q 80 120 100 100 Q 120 80 140 100 Q 160 120 180 100" 
+        fill="none" stroke="#00ff88" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Пульсуючі кільця -->
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#00ccff" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="30;45;30" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 
